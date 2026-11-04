@@ -20,6 +20,8 @@ spring:
     open-in-view: false
   flyway:
     enabled: true
+    # 迁移脚本按数据库方言分目录：common 为通用脚本，h2 为本地开发库专用
+    locations: classpath:db/migration/common,classpath:db/migration/h2
   jackson:
     time-zone: Asia/Shanghai
 app:
