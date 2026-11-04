@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>干饭搭子 · 校园美食社交（可运行 Demo）</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="#/home" aria-label="干饭搭子首页">
+    <span class="brand-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#F6FBF9" stroke-width="1.8" stroke-linecap="round"><path d="M3 11h18a9 9 0 0 1-18 0z"/><path d="M7 7c0-2 2-2 2-4M12 7c0-2 2-2 2-4M17 7c0-2 2-2 2-4"/></svg>
+    </span>
+    <span>
+      <span class="brand-name">干饭搭子</span>
+      <span class="brand-sub">GANFAN · CAMPUS</span>
+    </span>
+  </a>
+  <div class="menu" id="menu">
+    <a href="#/home" data-nav="home">首页</a>
+          <a href="#/nearby" data-nav="nearby">附近吃饭</a>
+    <a href="#/meetup" data-nav="meetup">约饭广场</a>
+    <a href="#/community" data-nav="community">美食社区</a>
+  </div>
+  <div class="nav-right">
+    <div class="search" id="searchBox">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#7E8F8E" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></svg>
+      <input id="navSearch" type="search" autocomplete="off" placeholder="搜索食堂 / 菜品">
+      <span class="kbd">Ctrl K</span>
+      <div class="search-panel" id="searchPanel"></div>
+    </div>
+    <button class="btn btn-primary" id="navPublish" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#F6FBF9" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+      发布约饭
+    </button>
+    <button class="btn btn-ghost" id="navAuth" type="button">登录</button>
+    <button class="avatar" id="navAvatar" type="button" title="编辑口味画像" style="border:0;cursor:pointer">🍚<i>Lv.7</i></button>
+  </div>
+</nav>
+
+<main id="view" aria-live="polite"></main>
+
+<div class="modal-mask" id="modalMask" role="dialog" aria-modal="true">
+  <div class="modal" id="modal"></div>
+</div>
+
+<div class="drawer-mask" id="drawerMask"></div>
+<aside class="drawer" id="drawer" aria-label="详情抽屉"></aside>
+
+<div id="toast-root"></div>
+
+<script src="assets/data.js"></script>
+<script src="assets/api.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
