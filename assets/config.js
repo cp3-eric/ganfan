@@ -7,5 +7,5 @@
 (function () {
   'use strict';
   if (!/\.onrender\.com$/.test(location.hostname)) { return; }
-  window.GANFAN_API_BASE = 'https://ganfan-qnko.onrender.com/api';
+  window.GANFAN_API_BASE = 'https://ganfan-snkc.onrender.com/api';
 })();
